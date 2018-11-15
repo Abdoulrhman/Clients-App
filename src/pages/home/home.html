@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="secondary">
+  	<ion-title>
+  		Clients List!
+  	</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item?.title}}</ion-item>
+	</ion-list>
+	
+
+	<ion-fab bottom right >
+		<button ion-fab (click)="addItem()" color="secondary">
+			<ion-icon name="add"></ion-icon>
+		</button>
+	</ion-fab>
+</ion-content>
